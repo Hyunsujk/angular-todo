@@ -1,7 +1,4 @@
 <p>input-button-unit works! The title is: {{ title }}</p>
 
-<!-- <input [value]="title" /> -->
-<input [value]="generateTitle()" />
-
-{{ generateTitle() }}
-<button>Save</button>
+<input [value]="title" />
+<button (click)="changeTitle('Button Clicked!')">Save</button>
