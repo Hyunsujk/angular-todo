@@ -12,7 +12,8 @@ export class InputButtonUnitComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  changeTitle(newTitle: string) {
-    this.title = newTitle;
+  changeTitle(event): void {
+    console.log(event);
+    this.title = event.target.value;
   }
 }
