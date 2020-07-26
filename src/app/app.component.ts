@@ -19,6 +19,6 @@ export class AppComponent {
   ];
 
   addItem(title: string) {
-    this.todoList.push({ title });
+    this.todoList.push({ title }); // same with {title:title} ES6 Object Property Value Shorthand
   }
 }
