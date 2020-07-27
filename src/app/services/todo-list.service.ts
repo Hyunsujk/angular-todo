@@ -29,8 +29,18 @@ export class TodoListService {
     return this.todoList;
   }
 
+  saveList() {
+    this.storageService.setData(todoListStorageKey, this.todoList);
+  }
+
   addItem(item: TodoItem) {
     this.todoList.push(item);
-    this.storageService.setData(todoListStorageKey, this.todoList);
+    this.saveList();
+  }
+
+  updateItem(item: TodoItem, changes) {
+    const index = this.todoList.indexOf(item);
+    this.todoList[index] = { ...item, ...changes };
+    this.saveList();
   }
 }
