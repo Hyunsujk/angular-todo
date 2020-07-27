@@ -19,7 +19,11 @@ const defaultTodoList = [
 export class TodoListService {
   todoList: TodoItem[];
 
-  constructor(private storageService: StorageService) {}
+  constructor(private storageService: StorageService) {
+    // the list will be either the list in the local storage or default one
+    this.todoList =
+      storageService.getData(todoListStorageKey) || defaultTodoList;
+  }
 
   getTodoList() {
     return this.todoList;
