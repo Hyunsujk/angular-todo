@@ -31,5 +31,6 @@ export class TodoListService {
 
   addItem(item: TodoItem) {
     this.todoList.push(item);
+    this.storageService.setData(todoListStorageKey, this.todoList);
   }
 }
