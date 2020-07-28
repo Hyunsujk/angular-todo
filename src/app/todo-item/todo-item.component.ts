@@ -14,4 +14,8 @@ export class TodoItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  removeItem() {
+    this.remove.emit(this.item);
+  }
 }
