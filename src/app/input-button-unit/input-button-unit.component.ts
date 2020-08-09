@@ -16,5 +16,6 @@ export class InputButtonUnitComponent implements OnInit {
 
   submitValue(newTitle: string) {
     this.submit.emit(newTitle);
+    this.title = '';
   }
 }
