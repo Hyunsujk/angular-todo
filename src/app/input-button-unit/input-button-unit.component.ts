@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./input-button-unit.component.scss'],
 })
 export class InputButtonUnitComponent implements OnInit {
-  title: string = '';
+  title: string | null = '';
 
   constructor() {}
 
@@ -16,6 +16,6 @@ export class InputButtonUnitComponent implements OnInit {
 
   submitValue(newTitle: string) {
     this.submit.emit(newTitle);
-    this.title = '';
+    this.title = null;
   }
 }
